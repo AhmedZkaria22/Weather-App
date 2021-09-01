@@ -77,12 +77,12 @@ function NextWeek({readData}) {
             return(
                 <>
                 <section className={'nxtweekNav'}>
-                    {/* <Link className="nav-link" to="/ReactWeatherHome">
+                    <Link className="nav-link" to="/ReactWeatherHome">
                         <RiArrowLeftFill />
-                    </Link>                      */}
-                    <Link className="nav-link" to="/">
+                    </Link>                     
+                    {/* <Link className="nav-link" to="/">
                         <RiArrowLeftFill />
-                    </Link>
+                    </Link> */}
                     <p> {readData['location']['name']} </p>
                 </section>
 
