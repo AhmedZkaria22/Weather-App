@@ -2,7 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { useEffect, useState } from 'react';
 import Current from './components/Current';
 import NextWeek from './components/NextWeek';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import { BrowserRouter as Router, HashRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 function App() {
 
   // Fetch date from weather api
@@ -25,7 +26,8 @@ function App() {
       
 
   return (
-    <Router>
+    <Router basename="/Weather-App">
+    {/* <Router> */}
       <div className="App">
         <Switch>
           <Route path="/ReactWeatherHome" exact>
@@ -39,6 +41,7 @@ function App() {
           </Route>
         </Switch>
       </div>
+    {/* </Router> */}
     </Router>
   );
 }
