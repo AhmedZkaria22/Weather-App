@@ -80,9 +80,6 @@ function NextWeek({readData}) {
                     <Link className="nav-link" to="/ReactWeatherHome">
                         <RiArrowLeftFill />
                     </Link>                     
-                    {/* <Link className="nav-link" to="/">
-                        <RiArrowLeftFill />
-                    </Link> */}
                     <p> {readData['location']['name']} </p>
                 </section>
 
