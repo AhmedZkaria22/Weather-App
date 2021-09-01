@@ -26,11 +26,11 @@ function App() {
       
 
   return (
-    <Router basename="/Weather-App">
+    <Router basename="/ReactWeatherHome">
     {/* <Router> */}
       <div className="App">
         <Switch>
-          <Route path="/ReactWeatherHome" exact>
+          <Route path="/" exact>
             <Current readData={readData} setUnSub1Fetch={setUnSub1Fetch} />
           </Route>
           {/* <Route path="/" exact>
