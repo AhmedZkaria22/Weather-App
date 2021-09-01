@@ -1,0 +1,204 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --backColor: #6DF9E5;
+  --textColorNormal: #2C5A71;
+  --textColorLight: #5E8C97;
+  --textColorDark: #2C2E59;
+  --hourlyItemBack: #96F5F5;
+}
+
+.inputActive {
+  color: var(--textColorLight);
+}
+
+.inputRead {
+  color: var(--textColorNormal) !important;
+  background-color: transparent !important;
+}
+
+.App {
+  background-color: #63E0DF;
+  padding-block: 1rem;
+}
+.App #current {
+  background-color: var(--backColor);
+  max-width: 500px;
+  margin: auto;
+  padding: 2rem 1rem;
+  border-radius: 2rem;
+}
+.App #current .weatherNav {
+  width: 100%;
+  clear: both;
+  overflow: auto;
+}
+.App #current .weatherNav > * {
+  height: 30px;
+  max-height: 30px;
+  display: inline-block;
+}
+.App #current .weatherNav svg {
+  padding: 0.2rem 0rem;
+}
+.App #current .weatherNav svg:first-of-type {
+  color: var(--textColorDark);
+  float: left;
+  margin-right: 0.3rem;
+}
+.App #current .weatherNav .nav-link {
+  float: right;
+  clear: right;
+  padding: 0;
+}
+.App #current .weatherNav .nav-link svg {
+  color: var(--textColorNormal);
+  font-size: 1.5rem;
+}
+.App #current .weatherNav .weatherNav__location {
+  float: left;
+  position: relative;
+}
+.App #current .weatherNav .weatherNav__location form > * {
+  color: var(--textColorNormal);
+  float: left;
+  height: 100%;
+}
+.App #current .weatherNav .weatherNav__location form input {
+  border: none;
+  border-radius: 0.35rem 0.35rem 0rem 0rem;
+  padding: 0.2rem 0.3rem;
+  width: 6rem;
+  color: var(--textColorLight);
+  margin-right: 0.3rem;
+  text-transform: capitalize;
+}
+.App #current .weatherNav .weatherNav__location form input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+.App #current .weatherNav .weatherNav__location form span {
+  position: absolute;
+  bottom: 0;
+  left: 0rem;
+  content: "";
+  width: 6rem;
+  height: 1px;
+  background-color: var(--textColorLight);
+  display: none;
+}
+.App #current .weatherNav .weatherNav__location form button {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+}
+.App #current .weatherNav .weatherNav__location form button svg {
+  font-size: 140%;
+  margin-top: 0.2rem;
+}
+.App #current .weatherToday {
+  text-align: center;
+}
+.App #current .weatherToday p:first-of-type {
+  font-size: medium;
+  color: var(--textColorNormal);
+  margin-top: 0.5rem;
+}
+.App #current .weatherToday p:nth-of-type(2) {
+  font-size: 4rem;
+  background: -webkit-gradient(linear, left top, right top, from(#312E60), to(#5C5D82));
+  background: linear-gradient(to right, #312E60, #5C5D82);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.App #current .weatherToday p:nth-of-type(2) sup {
+  font-size: 50%;
+  top: -1em;
+  font-weight: 500;
+  background: -webkit-gradient(linear, left top, right top, from(#312E60), to(#5C5D82));
+  background: linear-gradient(to right, #312E60, #5C5D82);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.App #current .weatherToday p:last-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.App #current .weatherToday p:last-of-type span:first-of-type {
+  margin-right: 0.25rem;
+}
+.App #current .weatherToday p:last-of-type span:last-of-type {
+  margin-left: 0.25rem;
+}
+.App #current .weatherToday p:last-of-type span:last-of-type svg {
+  margin-bottom: 0.1rem;
+}
+.App #current .weatherToday p:last-of-type > * {
+  font-size: x-small;
+  font-weight: 500;
+  color: var(--textColorLight);
+}
+.App #current .weatherHourly .weatherHourly__days {
+  width: 96%;
+}
+.App #current .weatherHourly .weatherHourly__days P {
+  color: var(--textColorNormal);
+  font-weight: 500;
+  text-align: center;
+  font-size: smaller;
+}
+.App #current .weatherHourly .weatherHourly__hours .slick-arrow, .App #current .weatherHourly .weatherHourly__hours .slick-prev, .App #current .weatherHourly .weatherHourly__hours .slick-next {
+  display: none !important;
+}
+.App #current .weatherHourly .weatherHourly__hours .slick-dots {
+  display: none !important;
+}
+.App #current .weatherHourly .weatherHourly__hours .weatherHourly__hours__item {
+  background-color: var(--hourlyItemBack);
+  width: 93% !important;
+  margin-inline: 3.5%;
+  border-radius: 1rem;
+  text-align: center;
+  padding-block: 0.5rem;
+}
+.App #current .weatherHourly .weatherHourly__hours .weatherHourly__hours__item:focus {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.App #current .weatherHourly .weatherHourly__hours .weatherHourly__hours__item p:first-of-type {
+  font-size: small;
+  color: var(--textColorLight);
+  margin-bottom: 0.5rem;
+}
+.App #current .weatherHourly .weatherHourly__hours .weatherHourly__hours__item p:nth-of-type(2) {
+  margin-bottom: 0;
+  font-size: 1.8rem;
+  background: -webkit-gradient(linear, left top, right top, from(#312E60), to(#5C5D82));
+  background: linear-gradient(to right, #312E60, #5C5D82);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.App #current .weatherHourly .weatherHourly__hours .weatherHourly__hours__item p:nth-of-type(2) sup {
+  font-size: 50%;
+  top: -1em;
+  font-weight: 500;
+  background: -webkit-gradient(linear, left top, right top, from(#312E60), to(#5C5D82));
+  background: linear-gradient(to right, #312E60, #5C5D82);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.App #current .weatherHourly .weatherHourly__hours .weatherHourly__hours__item svg {
+  color: white;
+  font-size: xxx-large;
+}

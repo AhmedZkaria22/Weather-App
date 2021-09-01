@@ -1,0 +1,132 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --nwBackColor: #232535;
+  --nwMsgsBack: #2E3341;
+  --nwTextColorNormal: #DFDACD;
+  --nwTextColorLight: #6D6F78;
+  --wicHot: #D97B29;
+  --wicRain: #1A5C84;
+  --wicDry: #A2A2A5;
+}
+
+.App {
+  background-color: #63E0DF;
+  padding-block: 1rem;
+}
+.App #nxtweek {
+  background-color: var(--nwBackColor);
+  max-width: 500px;
+  margin: auto;
+  padding: 2rem 1rem;
+  border-radius: 2rem;
+}
+.App #nxtweek .nxtweekNav {
+  width: 100%;
+  clear: both;
+  overflow: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2.8rem;
+}
+.App #nxtweek .nxtweekNav > * {
+  color: white;
+  float: left;
+  display: inline-block;
+}
+.App #nxtweek .nxtweekNav p {
+  margin-bottom: 0;
+  margin-left: 35%;
+}
+.App #nxtweek .container:first-of-type {
+  margin-bottom: 3rem;
+}
+.App #nxtweek .container:first-of-type .slick-dots li button:before {
+  opacity: 1;
+  color: var(--nwMsgsBack);
+}
+.App #nxtweek .container:first-of-type .slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: var(--nwTextColorNormal);
+}
+.App #nxtweek .container:first-of-type .slick-arrow, .App #nxtweek .container:first-of-type .slick-prev, .App #nxtweek .container:first-of-type .slick-next {
+  display: none !important;
+}
+.App #nxtweek .container:first-of-type .nxtweek__msgs .nxtweek__msgs__item {
+  background-color: var(--nwMsgsBack);
+  border-radius: 0.5rem;
+  padding: 2.5rem 0.8rem 0.5rem;
+  position: relative !important;
+}
+.App #nxtweek .container:first-of-type .nxtweek__msgs .nxtweek__msgs__item img {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  height: 50px;
+  width: 55px;
+}
+.App #nxtweek .container:first-of-type .nxtweek__msgs .nxtweek__msgs__item p:first-of-type {
+  color: #83868E;
+}
+.App #nxtweek .container:first-of-type .nxtweek__msgs .nxtweek__msgs__item p:last-of-type {
+  color: #CED0D3;
+}
+.App #nxtweek h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+.App #nxtweek .nxtweekDays .row div > p:not(:first-of-type) {
+  margin-inline: 5%;
+}
+.App #nxtweek .nxtweekDays .row div > p:first-of-type {
+  color: var(--nwTextColorNormal);
+  position: relative;
+  height: 6rem;
+  padding: 2rem 0rem 0rem 2rem;
+  z-index: 99;
+}
+.App #nxtweek .nxtweekDays .row div > p:first-of-type::before {
+  content: "";
+  width: 6rem;
+  height: 6rem;
+  background-color: #2e33414d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  z-index: -1;
+}
+.App #nxtweek .nxtweekDays .row div > p:first-of-type span {
+  padding-right: 1rem;
+}
+.App #nxtweek .nxtweekDays .row div > p:first-of-type span.dry {
+  color: var(--wicDry);
+}
+.App #nxtweek .nxtweekDays .row div > p:first-of-type span.hot {
+  color: var(--wicHot);
+}
+.App #nxtweek .nxtweekDays .row div > p:first-of-type span.rain {
+  color: var(--wicRain);
+}
+.App #nxtweek .nxtweekDays .row div > p:first-of-type span svg {
+  font-size: 1.5rem;
+}
+.App #nxtweek .nxtweekDays .row div > p:nth-of-type(2) {
+  color: var(--nwTextColorNormal);
+}
+.App #nxtweek .nxtweekDays .row div > p:nth-of-type(3) {
+  color: var(--nwTextColorLight);
+}
+.App #nxtweek .nxtweekDays .row div > p:nth-of-type(2), .App #nxtweek .nxtweekDays .row div > p:nth-of-type(3) {
+  text-align: right;
+}
+.App #nxtweek .nxtweekDays .row div > p:nth-of-type(2) span, .App #nxtweek .nxtweekDays .row div > p:nth-of-type(3) span {
+  float: left;
+}
