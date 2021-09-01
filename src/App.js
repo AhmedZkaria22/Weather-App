@@ -28,13 +28,13 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route path="/ReactWeatherHome" exact>
+          <Route path="/ReactWeatherHome" exact component={Current}>
             <Current readData={readData} setUnSub1Fetch={setUnSub1Fetch} />
           </Route>
           {/* <Route path="/" exact>
             <Current readData={readData} setUnSub1Fetch={setUnSub1Fetch} />
           </Route> */}
-          <Route path="/ReactWeatherNextWeek">
+          <Route path="/ReactWeatherNextWeek" component={NextWeek}>
             <NextWeek readData={readData} /> 
           </Route>
         </Switch>
